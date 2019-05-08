@@ -1,9 +1,17 @@
-{"manifest_version": 2,
-    "Name":"npm to Yarn Extension",
-    "Version":"1.0",
-    "content-scripts":[{
-        "js":["content.js"],
-        "matches": ["<all_urls>"]
-    }]
-
+{
+  "manifest_version": 2,
+  "name": "npm to Yarn Extension",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_icon": "npm.png"
+  }
 }
